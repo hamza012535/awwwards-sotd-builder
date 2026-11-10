@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>North Field Studio — Make the quiet loud</title>
+  <meta name="description" content="North Field is an independent design and engineering studio building expressive, fast, accessible websites.">
+  <meta name="theme-color" content="#efece4">
+  <!-- Progressive enhancement: the .js class unlocks hidden start-states for animation.
+       If scripts fail, every piece of content stays visible. -->
+  <script>document.documentElement.classList.add("js")</script>
+  <!-- Fonts: Bricolage Grotesque is a variable font (weight axis) used for the kinetic hero.
+       If it fails to load, system fonts keep the layout intact (animation falls back to motion only). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Custom cursor: decorative only, hidden on touch devices (see CSS + JS) -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">View</span></div>
+
+  <header class="bar">
+    <a class="bar__logo" href="#top" aria-label="North Field Studio, back to top">North Field<sup>®</sup></a>
+    <nav aria-label="Primary">
+      <ul class="bar__nav">
+        <li><a href="#work" data-cursor="link">Work</a></li>
+        <li><a href="#about" data-cursor="link">Studio</a></li>
+        <li><a href="#contact" data-cursor="link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO: 300vh of scroll drives a pinned (sticky) stage.
+         Scroll progress (0 to 1) is smoothed in JS and written to CSS variables,
+         so layout and effects stay in CSS while JS only supplies numbers. -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <div class="hero__media" aria-hidden="true">
+          <div class="hero__orb"></div>
+          <div class="hero__grid"></div>
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="line" data-split>Make the</span>
+          <span class="line" data-split>quiet loud.</span>
+        </h1>
+
+        <p class="hero__meta hero__meta--left">Independent design<br>&amp; engineering studio</p>
+        <p class="hero__meta hero__meta--right">Est. 2019 — Lisbon / Remote</p>
+        <p class="hero__scroll" aria-hidden="true"><span></span>Scroll</p>
+      </div>
+    </section>
+
+    <section class="statement" id="about" aria-labelledby="about-title">
+      <p class="label" data-reveal>( 01 ) Studio</p>
+      <h2 class="statement__text" id="about-title" data-reveal>
+        We build websites that feel like a point of view: fast to load, calm to read, and impossible to mistake for anyone else’s.
+      </h2>
+      <p class="statement__aside" data-reveal>
+        Six people, one rule: every motion earns its place. If an effect doesn’t clarify something, it doesn’t ship.
+      </p>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Brand systems</span><span>Web experiences</span><span>Motion</span><span>Creative engineering</span>
+        <span>Brand systems</span><span>Web experiences</span><span>Motion</span><span>Creative engineering</span>
+      </div>
+    </div>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work__head">
+        <p class="label" data-reveal>( 02 ) Selected work</p>
+        <h2 class="work__title" id="work-title" data-reveal>Four recent projects</h2>
+      </div>
+      <ol class="work__list">
+        <li data-reveal><a href="#contact" data-cursor="view"><span class="work__n">01</span><span class="work__name">Tidewater Ferries</span><span class="work__meta">Timetable redesign — 2025</span></a></li>
+        <li data-reveal><a href="#contact" data-cursor="view"><span class="work__n">02</span><span class="work__name">Atlas Lumen</span><span class="work__meta">Lighting brand &amp; e-commerce — 2025</span></a></li>
+        <li data-reveal><a href="#contact" data-cursor="view"><span class="work__n">03</span><span class="work__name">Halfmoon Press</span><span class="work__meta">Editorial platform — 2024</span></a></li>
+        <li data-reveal><a href="#contact" data-cursor="view"><span class="work__n">04</span><span class="work__name">Orbit Cooperative</span><span class="work__meta">Campaign microsite — 2024</span></a></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="foot" id="contact">
+    <p class="label">( 03 ) Contact</p>
+    <p class="foot__lead">Have something quiet that should be loud?</p>
+    <a class="foot__mail magnetic" href="mailto:hello@northfield.example" data-cursor="link">hello@northfield.example</a>
+    <p class="foot__small">© 2026 North Field Studio. Sample content for the starter template.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
